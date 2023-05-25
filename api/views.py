@@ -115,7 +115,7 @@ def floorplan_classify(request):
     client = session.client('sagemaker-runtime', region_name = 'us-east-1')
     request = {"url": url}
     response = client.invoke_endpoint(
-    EndpointName="pytorch-inference-2023-05-24-11-10-24-424",
+    EndpointName="pytorch-inference-2023-05-24-11-26-16-672",
     ContentType="application/json",
     Accept="application/json",
     Body=json.dumps(request)
