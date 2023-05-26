@@ -95,7 +95,7 @@ def call_model_and_ocr(request):
 
 @api_view(['GET'])
 def image_classify(request):
-    url = request.query_params.get('query', '')
+    url = request.query_params.get('query-parameter', '')
     session = boto3.Session(profile_name='958516987696_DataScience-tol')
     client = session.client('sagemaker-runtime', region_name = 'us-east-1')
     request = {"url": url}
@@ -110,7 +110,7 @@ def image_classify(request):
 
 @api_view(['GET'])
 def floorplan_classify(request):
-    url = request.query_params.get('query', '')
+    url = request.query_params.get('query-parameter', '')
     session = boto3.Session(profile_name='958516987696_DataScience-tol')
     client = session.client('sagemaker-runtime', region_name = 'us-east-1')
     request = {"url": url}
